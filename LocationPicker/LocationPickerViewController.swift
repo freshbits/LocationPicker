@@ -164,6 +164,7 @@ public class LocationPickerViewController: UIViewController {
         
         self.updateAnnotation()
         
+        self.resetBackButtonTitle()
 	}
 
 	public override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -222,6 +223,10 @@ public class LocationPickerViewController: UIViewController {
 			mapView.selectAnnotation(location, animated: true)
 		}
 	}
+    
+    private func resetBackButtonTitle() {
+        self.navigationController?.navigationBar.backItem?.title = nil
+    }
 	
 	func showCoordinates(coordinate: CLLocationCoordinate2D, animated: Bool = true) {
 		let region = MKCoordinateRegionMakeWithDistance(coordinate, resultRegionDistance, resultRegionDistance)
