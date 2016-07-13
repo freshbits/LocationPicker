@@ -225,7 +225,7 @@ public class LocationPickerViewController: UIViewController {
 	}
     
     private func resetBackButtonTitle() {
-        self.navigationController?.navigationBar.backItem?.title = nil
+        self.navigationController?.navigationBar.topItem?.title = nil
     }
 	
 	func showCoordinates(coordinate: CLLocationCoordinate2D, animated: Bool = true) {
