@@ -50,7 +50,7 @@ open class LocationPickerViewController: UIViewController {
 		if let navigationBar = self.navigationController?.navigationBar,
 			let barTintColor = navigationBar.barTintColor {
 				return barTintColor
-		} else { return .white() }
+		} else { return .white }
 	}()
     
     /// default: .Minimal
@@ -167,7 +167,7 @@ open class LocationPickerViewController: UIViewController {
         self.resetBackButtonTitle()
 	}
 
-	open override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
 		return statusBarStyle
 	}
 	

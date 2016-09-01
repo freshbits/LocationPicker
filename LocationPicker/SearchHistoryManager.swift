@@ -69,8 +69,8 @@ extension Location {
 			LocationDicKeys.placemarkAddressDic: addressDic as AnyObject,
 			LocationDicKeys.placemarkCoordinates: placemarkCoordinatesDic
 		]
-		if let name = name { dic[LocationDicKeys.name] = name }
-		return dic
+		if let name = name { dic[LocationDicKeys.name] = name as AnyObject }
+		return dic as NSDictionary
 	}
 	
 	class func fromDefaultsDic(_ dic: NSDictionary) -> Location? {
